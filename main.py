@@ -14,7 +14,7 @@ board = [[0 for x in xrange(size)] for y in xrange(size)]
 
 '''
 INITIALIZE A PLAYABLE BOARD
-v1.0
+v1.1
 '''
 def init_board(size):
 	
@@ -54,7 +54,13 @@ def search(x, y):
 		return True
 	return False
 	
+good_board = False
 
+while good_board == False:
+	if search(0,0) == True:
+		good_board = True
+	else:
+		init_board(size)
 
 '''
 CLASS "PLAYER" PLAYS THROUGH BOARD TO FINISH CONDITION
