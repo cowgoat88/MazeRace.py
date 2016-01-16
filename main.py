@@ -15,7 +15,8 @@ def init_board(size):
 	
 	for x in xrange(size):
 		for y in xrange(size):
-			board[x][y] = random.choice([0,1])	
+			board[x][y] = random.choice([0,1])
+	board[0][size] = 2
 	return board
 
 
